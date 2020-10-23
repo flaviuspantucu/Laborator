@@ -6,12 +6,12 @@ public class Controller {
 
     public static class Carte implements Comparable<Carte> {
         private String titlu, autor;
-        private int an_aparitie, nr_pagini;
+        private int an_publicatie, nr_pagini;
 
         public Carte(String title, String author, int year, int number) {
             this.titlu = title;
             this.autor = author;
-            this.an_aparitie = year;
+            this.an_publicatie = year;
             this.nr_pagini = number;
         }
         public int getPages(){
@@ -19,7 +19,7 @@ public class Controller {
         }
         @Override
         public String toString() {
-            String out = this.titlu + " - " + this.autor + " publicata in anul " + String.valueOf(this.an_aparitie);
+            String out = this.titlu + " - " + this.autor + " publicata in anul " + String.valueOf(this.an_publicatie);
             return out;
         }
         @Override
@@ -46,7 +46,7 @@ public class Controller {
         public String toString() {
             StringBuilder out = new StringBuilder();
             for (Carte carte : list) {
-                out.append(carte.titlu + carte.autor + "publicata in anul" + String.valueOf(carte.an_aparitie) + "\n");
+                out.append(carte.titlu + carte.autor + "publicata in anul" + String.valueOf(carte.an_publicatie) + "\n");
             }
             return out.toString();
         }

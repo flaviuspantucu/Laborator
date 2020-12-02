@@ -6,10 +6,12 @@ public class Utilizator {
     private String name;
     private ArrayList<Controller.Carte> carti;
     private int varsta;
-    public Utilizator(String nm, ArrayList<Controller.Carte> car, int years) {
+	private String email;
+    public Utilizator(String nm, ArrayList<Controller.Carte> car, int years, String email2) {
         this.name = nm;
         this.carti = car;
         this.varsta = years;
+		this.email = email2;
     }
 }
 
